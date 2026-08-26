@@ -1,5 +1,5 @@
 # Upwelling Indices for the US West Coast
-# cuti-beuti-timeseries
+## cuti-beuti-timeseries - Interactive plot built on observableframework and d3
 
 https://mjacox.com/upwelling-indices/
 
