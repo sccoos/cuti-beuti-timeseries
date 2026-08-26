@@ -1,0 +1,201 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#observablehq-center,
+#observablehq-main.observablehq,
+#observablehq-main > .observablehq.observablehq--block {
+  margin: 0 !important;
+  height: 100vh;
+}
+
+body {
+  background: #f5f8fb;
+  overflow: auto;
+}
+
+.dashboard-page {
+  width: 100vw;
+  height: 50vh;
+  min-height: 100vh;
+  padding: 0;
+  background: #f5f8fb;
+}
+
+.dashboard-plot-pane {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.dashboard-plot-pane > * {
+  width: 100%;
+  height: 100%;
+}
+
+.upwelling-dashboard {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.dashboard-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #161616;
+}
+
+.dashboard-control__label {
+  line-height: 1;
+}
+
+.dashboard-control__select {
+  min-width: 116px;
+  padding: 10px 14px;
+  border: 2px solid #9ca3af;
+  border-radius: 8px;
+  background: #f7f7f7;
+  font: inherit;
+  font-weight: 500;
+  color: #161616;
+}
+
+.plot-grid {
+  flex: 0 0 80vh;
+  height: 80vh;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.plot-card__chart {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+}
+
+.upwelling-chart {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.grid line {
+  stroke: rgba(15, 23, 42, 0.12);
+  stroke-width: 1;
+}
+
+.axis-domain,
+.axis-tick {
+  stroke: #6b7280;
+}
+
+.axis-label {
+  fill: #2c2c2c;
+  font-size: 14px;
+}
+
+.chart-title {
+  fill: #202020;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.chart-y-label {
+  fill: #202020;
+  font-size: 18px;
+}
+
+.legend-box {
+  fill: rgba(255, 255, 255, 0.9);
+  stroke: rgba(0, 0, 0, 0.45);
+  stroke-width: 1;
+}
+
+.legend-label {
+  fill: #1f1f1f;
+  font-size: 13px;
+}
+
+.hover-overlay {
+  fill: transparent;
+  cursor: crosshair;
+}
+
+.hover-marker {
+  stroke: #374151;
+  stroke-width: 1.25;
+  stroke-dasharray: 4 4;
+  pointer-events: none;
+}
+
+.hover-point {
+  stroke: #ffffff;
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.hover-point--mean {
+  fill: #1f1f1f;
+}
+
+.hover-tooltip {
+  pointer-events: none;
+}
+
+.hover-tooltip rect {
+  fill: rgba(255, 255, 255, 0.96);
+  stroke: rgba(0, 0, 0, 0.45);
+}
+
+.hover-tooltip text {
+  fill: #1f1f1f;
+  font-size: 12px;
+}
+
+.hover-tooltip__date {
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .plot-grid {
+    flex-basis: auto;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .upwelling-dashboard {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .dashboard-control {
+    font-size: 18px;
+    gap: 12px;
+  }
+
+  .dashboard-control__select {
+    min-width: 96px;
+    padding: 8px 12px;
+  }
+
+  .plot-card__chart {
+    min-height: 320px;
+  }
+}
